@@ -1,0 +1,26 @@
+.cart {
+    display: flex;
+    background-color: rgb(234,237,237);
+    padding: 20px;
+    max-height: max-content;
+}
+
+.cart__ad {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.cart__left {
+    background-color: white;
+    height: max-content;
+}
+
+.cart__title {
+    border-bottom: 1px solid lightgray;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.cart__left > div > h3 {
+    padding-left: 10px;
+}
