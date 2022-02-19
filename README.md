@@ -1,2 +1,2 @@
 # online-veggies
- e-commerce site for farmer
+E-commerce App
