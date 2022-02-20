@@ -1,0 +1,18 @@
+.orderproduct {
+    position: relative;
+    background-color: white;
+    padding: 40px;
+    margin: 20px 0;
+    border: 1px solid lightgray;
+}
+
+.orderproduct__id {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+.orderproduct__total {
+    text-align: right;
+    font-weight: 500;
+}

@@ -21,7 +21,7 @@ export default function CheckoutProduct(props) {
                         return <p>⭐</p>
                     })}
                 </div>
-                <button onClick ={removeBasketItem}>Remove from Basket</button>
+                {!props.hidebutton && <button onClick={removeBasketItem}>Remove from Basket</button>}
             </div>
         </div>
     )

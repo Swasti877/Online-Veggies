@@ -22,7 +22,6 @@ export default function Login() {
         e.preventDefault();
         auth.createUserWithEmailAndPassword(cred.email, cred.password)
             .then((auth) => {
-                console.log(auth)
                 if (auth) {
                     navigate('/')
                 }
