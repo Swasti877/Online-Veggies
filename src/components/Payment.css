@@ -1,5 +1,6 @@
 .payment {
     background-color: white;
+    color: black;
 }
 
 .payment > h1 {
@@ -43,6 +44,7 @@
     font-weight: 600;
     border-radius: 2px;
     margin-top: 10px;
+    color: black;
 }
 
 .payment__details > form > div > h3 {

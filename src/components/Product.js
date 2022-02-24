@@ -28,7 +28,7 @@ export default function Product(props) {
                 </div>
             </div>
             <img src={props.img} alt='product_img' />
-            <button type='button' onClick={addToBasket}>Add to Basket</button>
+            {!props.hideButton && <button type='button' onClick={addToBasket}>Add to Basket</button>}
         </div>
     )
 }

@@ -3,6 +3,7 @@
     background-color: rgb(234,237,237);
     padding: 20px;
     max-height: max-content;
+    color: black;
 }
 
 .cart__ad {
@@ -23,4 +24,5 @@
 
 .cart__left > div > h3 {
     padding-left: 10px;
+    color: black;
 }

@@ -1,0 +1,42 @@
+.footer__backToTopButton {
+    background-color: rgb(55,71,90);
+    text-align: center;
+    color:white;
+    padding: 12px 0;
+    font-size: 15px;
+}
+
+.footer__info {
+    display: flex;
+    background-color: rgb(35,47,62);
+}
+
+.footer__col {
+    color: white;
+    padding: 30px 0;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 300px;
+}
+
+.footer_colTitle {
+    font-weight: 700;
+    margin: 6px 0 14px 0;
+}
+
+.footer__col > p {
+    margin: 0 0 10px;
+}
+
+.footer__col > p > a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer__copyright {
+    background-color: rgb(19,26,34);
+    color: white;
+    text-align: center;
+    padding: 10px 0 30px;
+    font: 8px;
+}

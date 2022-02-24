@@ -1,8 +1,20 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Product from './Product';
 import './Home.css'
+import {db} from '../firebase'
 
 export default function Home() {
+    const [product, setProduct] = useState();
+    
+    useEffect(()=>{
+        db.collection('product').onSnapshot(snapShot =>{
+            setProduct(snapShot.docs.map(doc => ({
+                id: doc.id,
+                data: doc.data(),
+            })))
+        })
+    }, [])
+    
     return (
         <div className="home">
             <div className="home__container">
@@ -19,6 +31,10 @@ export default function Home() {
             </div>
             <div className="home__row">
                 <Product id={43643} title='LG Curved UltraWide 87 cm (34 Inches) QHD (3440 x 1440) IPS Display - HDR 10, sRGB 99%, 1.07 Billion Colors, USB C with 60W Power Delivery, Display Port, HDMI, 34WN80C' rating={5} price={55999} img='https://m.media-amazon.com/images/I/71Jg-6AQfaL._SL1500_.jpg' />
+            </div>
+            <div className="home__row">
+                {product && product.map(item => 
+                <Product id={item.id} title={item.data.product_title} img={item.data.product_img} price={item.data.product_price} rating={4}/>)}
             </div>
         </div>
     )

@@ -1,7 +1,9 @@
 .order {
     padding: 20px 80px;
+    color: black;
 }
 
 .order > h1 {
     margin: 30px 0;
+    color: black;
 }

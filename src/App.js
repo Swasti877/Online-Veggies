@@ -2,6 +2,8 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Cart from './components/Cart'
 import Orders from './components/Order'
+import Footer from './components/Footer';
+import HeaderOptional from './components/HeaderOptional';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -42,14 +44,15 @@ function App() {
       <div className="App">
         <Routes>
           <Route exact path='/login' element={<Login />} />
-          <Route exact path='/orders' element={<><Header /> <Orders /></>} />
-          <Route exact path='/cart' element={<><Header /> <Cart /></>} />
+          <Route exact path='/orders' element={<><Header /> <Orders /><Footer /></>} />
+          <Route exact path='/cart' element={<><Header /> <Cart /><Footer /></>} />
+          <Route exact path='/sellerpage' element={<><Header /> <HeaderOptional /><Footer /></>} />
           <Route exact path='/payment' element={<>
           <Header />
           <Elements stripe={stripePromise}>
           <Payment />
           </Elements></>} />
-          <Route exact path='/' element={<><Header /> <Home /></>} />
+          <Route exact path='/' element={<><Header /> <Home /><Footer /></>} />
         </Routes>
       </div>
     </Router>

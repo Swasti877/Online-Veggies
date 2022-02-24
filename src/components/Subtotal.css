@@ -23,9 +23,14 @@
 .subtotal > button {
     background-color: rgb(254,189,105);
     border: 1px solid;
+    color: black;
     width: 100%;
     height: 30px;
     border-color: #a88734 #9c7e31 #846a29;
     font-weight: 600;
     border-radius: 2px;
+}
+
+.subtotal__gift > input {
+    color-scheme: none;
 }

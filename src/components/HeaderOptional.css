@@ -1,0 +1,15 @@
+.headeroptional__options {
+    background-color: rgb(35,47,62);
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.headeroptional__options > p{
+    margin: 5px 0 6px;
+    padding: 8px 9px;
+}
+
+.headeroptional__options >p:first-child {
+    margin-left: 20px;
+}

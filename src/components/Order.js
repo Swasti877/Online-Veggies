@@ -20,7 +20,7 @@ export default function Order() {
             setOrder([])
         }
     }, [state.user])
-    console.log("Order >>>", order.data)
+    
     return (
         <div className="order">
             <h1>Your Orders</h1>

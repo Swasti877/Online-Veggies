@@ -4,6 +4,7 @@
     align-items: center;
     background-color: white;
     height: 100vh;
+    color: black;
 }
 
 .login > a {
@@ -28,6 +29,7 @@
 .login__container > form {
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 
 .login__container > form  > h1 {
@@ -44,6 +46,7 @@
     margin-bottom: 10px;
     background-color: white;
     width: 98%;
+    color: black;
 }
 
 .login__container > p {
@@ -60,6 +63,7 @@
     height: 30px;
     width: 100%;
     margin-top: 10px;
+    color: black;
 }
 
 .login__signup  {
@@ -68,5 +72,6 @@
     height: 30px;
     border: 1px solid;
     margin-top: 10px;
-    border-color: darkgrey;
+    border-color: lightgray;
+    color: white;
 }

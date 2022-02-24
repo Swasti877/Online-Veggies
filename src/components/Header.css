@@ -27,12 +27,15 @@
     height: 30px;
     width: 100%;
     border: none;
+    background-color: white;
+    color: black;
 }
 
 .header__nav-search-icon {
     background-color: rgb(254,189,105);
     height: 30px;
     padding: 5px;
+    color: black;
 }
 
 .header__right {
