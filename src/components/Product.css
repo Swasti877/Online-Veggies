@@ -1,16 +1,12 @@
 .product {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     background-color: white;
     z-index: 0;
-    align-items: center;
-    justify-items: flex-end;
-    max-height: 400px;
-    min-width: 100px;
+    flex-grow: 1;
+    flex-basis: 20%;
     margin: 10px;
     padding: 20px;
-    width: 100%;
-    color: black;
 }
 
 .product__rating {
@@ -25,6 +21,8 @@
 }
 
 .product > button {
+    margin: auto auto 0 auto;
+    height: fit-content;
     background-color: rgb(254,189,105);
     border: 1px solid;
     border-color: #a88734 #9c7e31 #846a29;
@@ -34,4 +32,9 @@
 
 .product__info {
     width: 100%;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
 }

@@ -11,6 +11,7 @@ export default function Order() {
     useEffect(() => {
         if (state.user) {
             db.collection('users').doc(state.user?.uid).collection('orders').orderBy('created', 'desc').onSnapshot(snapShot => {
+                
                 setOrder(snapShot.docs.map(doc => ({
                     id: doc.id,
                     data: doc.data(),

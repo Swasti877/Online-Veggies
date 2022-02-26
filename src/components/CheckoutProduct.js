@@ -17,7 +17,7 @@ export default function CheckoutProduct(props) {
                 <p className='checkout_productTitle'>{props.title}</p>
                 <p><small>₹</small>{props.price}</p>
                 <div className="checkout__productRating">
-                    {Array(props.rating).fill().map((_, i) => {
+                    {!props.hidestar && Array(props.rating).fill().map((_, i) => {
                         return <p>⭐</p>
                     })}
                 </div>
