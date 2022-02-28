@@ -67,6 +67,7 @@ export default function Payment() {
         }
         getClientSecret();
     }, [state.basket])
+
     return (
         <div className="payment">
             <h1><Link to='/cart'>Checkout ({state.basket?.length} items)</Link></h1>

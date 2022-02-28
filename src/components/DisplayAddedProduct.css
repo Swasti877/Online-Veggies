@@ -10,3 +10,59 @@
     padding-bottom: 10px;
     border-bottom: 1px solid lightgray;
 }
+
+.modalEdit {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__container {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px 20px;
+    margin: 20px auto;
+    width: 300px;
+    height: auto;
+}
+
+.modal__container > h3 {
+    font-weight: 600;
+    padding-bottom: 7px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.modal__container > form {
+    padding-top: 7px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__container > form > input, label {
+    margin-bottom: 5px;
+}
+
+.modal__container > form > input {
+    padding: 3px 7px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.modal__container > button {
+    margin: 5px 5px 0 0;
+    background-color: rgb(254,189,105);
+    border: 1px solid;
+    border-color: #a88734 #9c7e31 #846a29;
+    font-weight: 600;
+    border-radius: 2px;
+    height: 30px;
+    width: fit-content;
+    color: black;
+    cursor: pointer;
+}

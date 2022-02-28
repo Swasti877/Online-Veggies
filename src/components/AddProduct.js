@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useStateValue } from '../context/product/ProductState';
 import { db, storage } from '../firebase';
 import './AddProduct.css';
 import DisplayAddedProduct from './DisplayAddedProduct';
+import LoadingBar from 'react-top-loading-bar';
+import SellerEarning from './SellerEarning';
 
 export default function AddProduct() {
     const [itemDetials, setItemDetials] = useState({ title: '', price: '' });
     const [img, setImg] = useState();
+    const [progress, setProgress] = useState();
     const [state, dispatch] = useStateValue();
     const navigate = useNavigate();
 
@@ -18,10 +21,12 @@ export default function AddProduct() {
     //Add Product to database
     const handleAddProduct = async (e) => {
         e.preventDefault();
+        setProgress(20);
         //Upload image
         const uploadTask = storage.ref(`product-img/${img.name}`).put(img);
         uploadTask.on('state_changed', (snapshot) => {
             const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            setProgress(progress)
             console.log('Upload is ' + progress + '% done');
         }, error => {
             console.log(error.message);
@@ -34,7 +39,6 @@ export default function AddProduct() {
                     product_img: url,
                     user_id: state.user.uid,
                 }).then((res) => {
-                    console.log(res.id);
                     db.collection('users').doc(state.user?.uid).collection('addedProducts').doc(res.id).set({
                         product_id: res.id,
                     }).then(() => {
@@ -60,26 +64,32 @@ export default function AddProduct() {
     }
 
     return (
-        <div className='sellerPage'>
-            <div className="add__product">
-                <div className="addProduct__container">
-                    <div className="addProduct__form">
-                        <h1>Add a Product</h1>
-                        <form>
-                            <label htmlFor='title'>Title <strong>*</strong></label>
-                            <input onChange={onChange} id='title' type='text' name='title' value={itemDetials.title} required />
-                            <label htmlFor='price' >Price <strong>*</strong></label>
-                            <input onChange={onChange} id='price' type='number' name='price' value={itemDetials.price} required />
-                            <label htmlFor='img'>Upload a Image <strong>*</strong></label>
-                            <input onChange={handleSubmitImage} id='img' type='file' name='img' accept='image/*' required />
-                            <button type='submit' onClick={handleAddProduct}>Add Product</button>
-                        </form>
+        <>
+            <LoadingBar color='red' progress={progress} onLoaderFinished={() => { setProgress(0) }} />
+            <div className='sellerPage'>
+                <div className="add__product">
+                    <div className="addProduct__container">
+                        <div className="addProduct__form">
+                            <h1>Add a Product</h1>
+                            <form>
+                                <label htmlFor='title'>Title <strong>*</strong></label>
+                                <input onChange={onChange} id='title' type='text' name='title' value={itemDetials.title} required />
+                                <label htmlFor='price' >Price <strong>*</strong></label>
+                                <input onChange={onChange} id='price' type='number' name='price' value={itemDetials.price} required />
+                                <label htmlFor='img'>Upload a Image <strong>*</strong></label>
+                                <input onChange={handleSubmitImage} id='img' type='file' name='img' accept='image/*' required />
+                                <button type='submit' onClick={handleAddProduct}>Add Product</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
+                <div className='child'>
+                    <DisplayAddedProduct />
+                </div>
+                <div className="seller__earning">
+                    <SellerEarning />
+                </div>
             </div>
-            <div className='child'>
-                <DisplayAddedProduct />
-            </div>
-        </div>
+        </>
     )
 }

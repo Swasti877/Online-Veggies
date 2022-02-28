@@ -7,6 +7,7 @@
 .checkout__productInfo {
     padding-left: 20px;
     flex: 60%;
+    position: relative;
 }
 
 .checkout__productRating {
@@ -32,4 +33,19 @@
 .checkout_productTitle {
     font-size: 13px;
     font-weight: 800;
+}
+
+.iconDelete {
+    color: red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.iconEdit {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    cursor: pointer;
 }

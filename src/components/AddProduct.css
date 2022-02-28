@@ -4,11 +4,22 @@
 }
 
 .child {
-    flex: 0.8;
+    flex: 0.6;
+    margin-right: 10px;
+}
+
+.seller__status {
+    flex: 0.2;
+}
+
+.seller__earning {
+    flex: 0.2;
 }
 
 .add__product {
     color: black;
+    flex: 0.2;
+    margin-bottom: 20px;
 }
 
 .addProduct__form > form > input {
