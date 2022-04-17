@@ -9,7 +9,7 @@ export default function Cart() {
     return (
         <div className="cart">
             <div className="cart__left">
-                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/AmazonPay/PrimeRewards/LP_Revamp/PC_Header_Banner._CB468631809_.jpg" alt="ad" className="cart__ad" />
+                <img src="https://firebasestorage.googleapis.com/v0/b/online-veggies-2bac6.appspot.com/o/resources%2Fbanner-lising.jpg?alt=media&token=507e1dc2-30f3-4415-a8de-d922fc25494d" alt="ad" className="cart__ad" />
 
                 <div>
                     <h3>Hello, {user?.email}</h3>

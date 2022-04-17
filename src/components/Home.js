@@ -19,17 +19,17 @@ export default function Home() {
     return (
         <div className="home">
             <div className="home__container">
-                <img className='home__img' src='https://m.media-amazon.com/images/I/61DUO0NqyyL._SX3000_.jpg' alt='img' />
+                <img className='home__img' src="https://firebasestorage.googleapis.com/v0/b/online-veggies-2bac6.appspot.com/o/resources%2Fbanner-lising.jpg?alt=media&token=507e1dc2-30f3-4415-a8de-d922fc25494d" alt='img' />
             </div>
             <div className="home__row">
-                <Product key={1234} id={1234} title='Apple iPhone 13 (128GB) - Midnight' price={74900} rating={4} img='https://m.media-amazon.com/images/I/61VuVU94RnL._AC_UY218_.jpg' />
-                <Product key={12345} id={12345} title='Samsung Galaxy S21 FE 5G (Lavender, 8GB, 128GB Storage)' rating={4} price={54999} img='https://m.media-amazon.com/images/I/8131pwAojZL._AC_UY218_.jpg' />
+                <Product key={1234} id={1234} title='Fresho Potato, 1 kg' price={25} rating={4} img='https://firebasestorage.googleapis.com/v0/b/online-veggies-2bac6.appspot.com/o/resources%2Fpotato_testing_image.webp?alt=media&token=9329d9f6-5949-43ce-ae16-c871ed06d239' />
+                <Product key={12345} id={12345} title='BROCCOLI (350G-400G)' rating={4} price={180} img='https://firebasestorage.googleapis.com/v0/b/online-veggies-2bac6.appspot.com/o/resources%2FBROCCOLI_testing_image.jpg?alt=media&token=21b85291-42e1-44d1-9ffc-337884ab5c02' />
             
-                <Product key={23432} id={23432} title='2021 Apple iMac with 4.5K Retina Display (24-inch/60.96 cm, Apple M1 chip with 8‑core CPU and 8‑core GPU, 8GB RAM, 512GB) - Silver' price={149990} rating={4} img='https://m.media-amazon.com/images/I/61LNnZPoKPS._AC_UY218_.jpg' />
-                <Product key={2141} id={2141} title='AmazonBasics Pinch Pleat Comforter Bedding Set, Full / Queen, Navy Blue' rating={5} price={2489} img='https://m.media-amazon.com/images/I/81xGpR6n5BL._AC_UL320_.jpg' />
-                <Product key={325432} id={325432} title='AmazonBasics 670 L French Door Frost Free Refrigerator (Silver, Triple cooling zone, Convertible)' rating={3} img='https://images-eu.ssl-images-amazon.com/images/I/21wfgAPOWKL._SX342_SY445_QL70_FMwebp_.jpg' price={71999} />
+                <Product key={23432} id={23432} title='Tomato Desi Local 1 kg' price={33} rating={4} img='https://firebasestorage.googleapis.com/v0/b/online-veggies-2bac6.appspot.com/o/resources%2Ftomato_testing_image.webp?alt=media&token=2f203218-280d-4aae-975a-fbef2bbb336d' />
+                <Product key={2141} id={2141} title='Fresho Kiwi - Green, Small, 3 pcs 60 to 89 g, per piece' rating={5} price={97.92} img='https://firebasestorage.googleapis.com/v0/b/online-veggies-2bac6.appspot.com/o/resources%2F40114877_1-fresho-kiwi-green-small_testing_image.webp?alt=media&token=82757aad-be4f-4108-8478-1367d20c9ece' />
+                <Product key={325432} id={325432} title='Fresho Apple - Shimla, 4 pcs (Approx. 500g- 650g)' rating={3} img='https://firebasestorage.googleapis.com/v0/b/online-veggies-2bac6.appspot.com/o/resources%2F40033819_27-fresho-apple-shimla.webp?alt=media&token=026cf15c-104b-4cad-beb7-d8fdee3b0d90' price={139} />
             
-                <Product key={43643} id={43643} title='LG Curved UltraWide 87 cm (34 Inches) QHD (3440 x 1440) IPS Display - HDR 10, sRGB 99%, 1.07 Billion Colors, USB C with 60W Power Delivery, Display Port, HDMI, 34WN80C' rating={5} price={55999} img='https://m.media-amazon.com/images/I/71Jg-6AQfaL._SL1500_.jpg' />
+                <Product key={43643} id={43643} title='Fresho Blueberry, 125 g' rating={5} price={353.13} img='https://firebasestorage.googleapis.com/v0/b/online-veggies-2bac6.appspot.com/o/resources%2F30009286_7-fresho-blueberry.webp?alt=media&token=44ad30c3-0265-4925-932a-4fd083b24c98' />
                 {product && product.map(item => 
                 <Product key={item.id} id={item.id} title={item.data.product_title} img={item.data.product_img} price={parseInt(item.data.product_price)} rating={4}/>)}
             </div>

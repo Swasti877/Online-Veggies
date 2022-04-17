@@ -56,7 +56,7 @@ export default function AddProduct() {
     }
 
     const handleSubmitImage = (e) => {
-        if (/(\.png|\.jpg|\.jpeg)$/i.exec(e.target.files[0].name) && state.user) {
+        if (/(\.png|\.webp|\.jpg|\.jpeg)$/i.exec(e.target.files[0].name) && state.user) {
             setImg(e.target.files[0])
         } else {
             alert('Invalid Img Format');
